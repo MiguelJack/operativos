@@ -2,8 +2,8 @@
 #define MIN_PID 300
 #define MAX_PID 5000
 
-int pidsLength = 4700;
-int pids[4700];
+int pidsLength = 4701;
+int pids[4701];
 
 int main(int argc, char const *argv[]){
 	if (allocate_map() == 1){
