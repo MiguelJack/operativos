@@ -26,7 +26,7 @@ int newProcess(){
 }
 
 int allocate_map(void){
-	for (int i = 1; i <= pidsLength; ++i){
+	for (int i = 0; i < pidsLength; ++i){
 		pids[i] = 0;
 	}
 	return 1;
