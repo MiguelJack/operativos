@@ -45,6 +45,6 @@ int allocate_pid(void){
 }
 
 void release_pid(int pid){
-	pids[pid - MIN_PID] = 0;
+	pids[pid - MIN_PID - 1] = 0;
 }
 
