@@ -34,9 +34,9 @@ int allocate_map(void){
 
 int allocate_pid(void){
 	int pid = -1;
-	for (int i = 1; i <= pidsLength; ++i){
+	for (int i = 0; i < pidsLength; ++i){
 		if (pids[i] == 0){
-			pid = i+MIN_PID;
+			pid = i+MIN_PID+1;
 			pids[i] = 1;
 			break;
 		}
