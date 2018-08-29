@@ -5,18 +5,14 @@
 int pidsLength = 4700;
 int pids[4700];
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
 	if (allocate_map() == 1){
-		for (int i = 0; i < 20; ++i)
-		{
+		for (int i = 0; i < 20; ++i){
 			newProcess();
 		}
 		release_pid(302);
 		newProcess();
 	}
-	
-	
 	return 0;
 }
 
@@ -30,8 +26,7 @@ int newProcess(){
 }
 
 int allocate_map(void){
-	for (int i = 1; i <= pidsLength; ++i)
-	{
+	for (int i = 1; i <= pidsLength; ++i){
 		pids[i] = 0;
 	}
 	return 1;
@@ -39,10 +34,8 @@ int allocate_map(void){
 
 int allocate_pid(void){
 	int pid = -1;
-	for (int i = 1; i <= pidsLength; ++i)
-	{
-		if (pids[i] == 0)
-		{
+	for (int i = 1; i <= pidsLength; ++i){
+		if (pids[i] == 0){
 			pid = i+MIN_PID;
 			pids[i] = 1;
 			break;
