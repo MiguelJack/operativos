@@ -36,7 +36,7 @@ int allocate_pid(void){
 	int pid = -1;
 	for (int i = 0; i < pidsLength; ++i){
 		if (pids[i] == 0){
-			pid = i+MIN_PID+1;
+			pid = i+MIN_PID;
 			pids[i] = 1;
 			break;
 		}
@@ -45,6 +45,6 @@ int allocate_pid(void){
 }
 
 void release_pid(int pid){
-	pids[pid - MIN_PID - 1] = 0;
+	pids[pid - MIN_PID] = 0;
 }
 
